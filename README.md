@@ -614,6 +614,8 @@
 * Piotr Pasich http://piotrpasich.com/
 * Piotr Wittchen http://blog.wittchen.biz.pl/
 
+#### Q individuals
+
 #### R individuals
 * Rachel Kroll https://rachelbythebay.com/w/
 * Radek Pazdera http://radek.io
@@ -667,6 +669,8 @@
 * William Kennedy https://www.goinggo.net/
 * Wojtek Gawroński http://www.afronski.pl/
 
+#### X individuals
+
 #### Y individuals
 * Yegor Bugayenko http://www.yegor256.com/
 * Yifan Lu http://yifan.lu/
@@ -681,11 +685,21 @@
 * Android https://android-developers.blogspot.com/
 * Atom.io http://blog.atom.io/
 
+#### B technologies
+
 #### C technologies
 * Crystal https://crystal-lang.org/
 
+#### D technologies
+#### E technologies
+#### F technologies
+
 #### G technologies
 * Go https://blog.golang.org/
+
+#### H technologies
+
+#### I technologies
 
 #### K technologies
 * Klipse http://blog.klipse.tech/
@@ -699,6 +713,10 @@
 #### N technologies
 * .NET https://blogs.msdn.microsoft.com/dotnet/
 
+#### O technologies
+#### P technologies
+#### Q technologies
+
 #### R technologies
 * React https://facebook.github.io/react/blog/
 * RocksDB http://rocksdb.org/blog
@@ -707,9 +725,16 @@
 #### S technologies
 * Swift https://developer.apple.com/swift/blog/
 
+#### T technologies
+#### U technologies
+
 #### V technologies
 * Vertabelo http://www.vertabelo.com/blog
 
+#### W technologies
+#### X technologies
+#### Y technologies
+#### Z technologies
 ----
 
 # RSS feeds
