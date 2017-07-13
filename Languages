@@ -1,0 +1,221 @@
+JS
+
+function handleClick() {
+  var counter = document.getElementById('counter');
+  var count = parseInt(counter.innerHTML);
+  counter.innerHTML = count + 1;
+}
+
+You're Correct!
+The first version of JavaScript was famously (or infamously?) written in just 10 days for the Netscape Navigator browser. Originally called LiveScript, the name was eventually changed to JavaScript at least partially as a marketing move to try to take advantage of the popularity of Java. Today, JavaScript is one of the most widely used languages, and can be found in browsers, on servers, or in applications like embedded systems or IoT devices.
+
+def index
+  @serialized_addresses = @addresses.map do |address|
+    "#{address[:street]}, #{address[:city]} #{address[:state]}"
+  end
+end
+
+You're Correct!
+Ruby was created in 1995 by Yukihiro “Matz” Matsumoto in Japan. It advertises itself as “A Programmer's Best Friend”, owing to its simple and elegant syntax. Interestingly, while in the US Ruby is associated almost exclusively with Ruby on Rails, in Japan the language is used very differently in applications such as embedded systems and scientific computing.
+
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+ var query_multiselect = svcContext.IncidentSet
+                        .Where(i => i.IncidentId != _incidentId1)
+                        .Select(i => i.incident_customer_accounts)
+                        .Where(a => a.AccountId != _accountId2)
+                        .Select(a => a.account_primary_contact)
+                        .OrderBy(c => c.FirstName)
+                        .Select(c => c.ContactId);
+ foreach (var c in query_multiselect)
+ {
+  System.Console.WriteLine(c.GetValueOrDefault());
+ }
+}
+
+You're Correct!
+C# was developed by Microsoft and first released in 2000. It was developed for use with the .NET framework, and now powers a wide variety of applications on server, mobile, embedded, and IoT systems. Just as the ++ in the name C++ is intended to imply that C++ is a step above C, the # in the name C# is intended to resemble two ++ operators stacked on each other, indicating that C# is a step above C++.
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    SearchResultsViewController *searchResultsController = [self.storyboard instantiateViewControllerWithIdentifier:SearchResultsViewControllerStoryboardIdentifier];
+
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
+    self.searchController.searchResultsUpdater = searchResultsController;
+    self.searchController.hidesNavigationBarDuringPresentation = NO;
+
+    self.searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    self.searchController.searchBar.placeholder = NSLocalizedString(@"Search", nil);
+
+    self.navigationItem.titleView = self.searchController.searchBar;
+
+    self.definesPresentationContext = YES;
+}
+
+Objective-C was first released in 1984. In 1988 NeXT licensed the language for use in the NeXTSTEP operating system, which would later form the foundation of Mac OS X, where it is still in use today. Some of the elements of Objective-C syntax are obscure and distinctive, such as the use of square brackets in method calls, and the requirement of named parameters.
+
+if($cookie->verifyCookie() && !(isset($_GET['error'])) && !(isset($_GET['success']))) {
+    session_start();
+    if(isset($_SESSION['uid']))
+        header("Location: reg");
+    }
+
+    if(isset($_GET['error']) || isset($_GET['success'])) {
+        if(isset($_COOKIE["user"])) {
+            setcookie("user", "", time() - 3600);
+        }
+    }
+}
+
+You're Correct!
+PHP was created by Rasmus Lerdorf in 1994. He created PHP originally to keep track of the view count of his online resume, but expanded it over time to support more features. Lerdorf claims that he never had any intent to create a programming language, but rather “just kept adding the next logical step on the way”. Today, a large portion of webpages on the internet are built with PHP, including Facebook and Wordpress. PHP is a recursive acronym that stands for PHP: Hypertext Preprocessor.
+
+You might have heard a lot about Kotlin lately after the Android team announced first class support for it at Google I/O 2017. Kotlin was developed by JetBrains and first released in 2011. The JetBrains team wanted a JVM language with a feature set like Scala's, but weren't happy with Scala's very slow compilation, so they wrote their own! Interestingly, some say Kotlin is very similar to another relatively new language on its rival platform, Swift.
+
+fn insert_sources(&mut self) -> Result<(), String> {
+    let id = self.id;
+    let prefix = self.prefix;
+    let re = Regex::new(r"\{(.*\.rs)\}").unwrap();
+
+    let mut table = Vec::new();
+    for line in self.content.lines() {
+        match re.captures(line) {
+            None => {},
+            Some(captures) => {
+                let src = captures.at(1).unwrap();
+                let input = format!("{{{}}}", src);
+                let p = format!("examples/{}/{}/{}", prefix, id, src);
+
+                let mut f = File::open(&Path::new(&p)).unwrap();
+                let mut s = String::new();
+                f.read_to_string(&mut s).unwrap();
+                let output = format!("``` \n// {}\n{}```", src, s);
+
+                table.push((input, output))
+            }
+        }
+    }
+
+    for (input, output) in table.into_iter() {
+        self.content = self.content.replace(&input,
+                                            &output);
+    }
+
+    Ok(())
+}
+You're Correct!
+Rust advertises itself as a "systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety". Despite the fact that many say the language is difficult to work with, Rust has managed to garner quite a lot of interest since it was first released in 2010. Rust was even voted most loved language in a 2017 Stack Overflow survey. Mozilla is a prominent backer of the language, and is using it to build Servo, their new browser layout engine. And even if you're not a fan of thread safety, memory safety, or static typing, it still might be worth giving Rust a try if only so you can call yourself a "Rustacean".
+
+(defn fibonacci [n]
+  (if (< n 3)
+    1
+    (+ (fibonacci (- n 1))
+       (fibonacci (- n 2)))))
+
+You're Correct!
+Clojure was first released in 2007 by Rich Hickey, who desired a Lisp that was interoperable with Java. Clojure primarily runs on the JVM, but there exists another very popular compiler called ClojureScript that targets JavaScript. Clojure is distinguishable from other Lisps by its characteristic use of square brackets surrounding function parameters.
+
+s←{sfmt⊃cmap∘rcb svec ⍵}
+  sfmt←{⊂[3 4]1 3 2 4⍉(2/(⍴⍵)*÷2)⍴⍵}
+  cmap←{⊂[⍳⍴⍴⍵]1∊¨⍵∘.=⍵}
+  rcb←{(⍳⍵),¨box⊃⍵*÷2}
+    box←{⍵⌿⍵/⍵ ⍵⍴⍳⍵×⍵}
+  svec←{⊃(⍺⍺⍴⍵)nxtv/(emt ⍵),⊂⊂⍵}
+    nxtv←{⊃,/⍺∘(⍺⍺ nxt)¨⍵}
+      nxt←{(⍺(⍺⍺ avl)⍵)(⍺ at)¨⊂⍵}
+        avl←{(⍳×/1↓⍴⍵)~⍵×⊃⍺⌷⍺⍺}
+        at←{⍵+(⍴⍵)↑(-⍺⍺)↑⍺}
+    emt←{(,⍵=0)/,⍳⍴⍵}
+    
+    You're Correct!
+APL, an acronym for “A Programming Language”, started out as a mathematical notation created by Ken Iverson in 1957. Iverson published a book called “A Programming Language” in 1962 that described this notation, and shortly thereafter others on his team at IBM turned this notation into a working programming language. Its origin as a mathematical notation helps to explain why APL programs consist largely of symbols that don't appear on modern day keyboards. This fact also makes APL programs rather difficult to decipher by an untrained reader. For example, the above 11-line program is, in fact, a Sudoku solver.
+
+while (error > threshold) {
+  obj.initial <- as.numeric(s.sum %*% a) + C0 * fD
+  fS.1d <- s.sum
+
+  gradient <- fS.1d - C0 * fD.1d
+  hessian <- -C0 * fD.2d + fudge * diag(1, d)
+  invhessian <- solve(hessian)
+  cstep <- invhessian %*% t(gradient)
+
+  lambda <- 1
+  atemp <- a - lambda * cstep
+  atemp[atemp < 0] <- 0
+
+  fDo <- log(sum(sqrt((dist1.dism^2) %*% atemp)))
+  obj <- as.numeric(s.sum %*% atemp) + C0 * fDo
+  obj.previous <- obj * 1.1
+}
+
+You're Correct!
+R is an open source language for statistical computing and graphics that is widely used by data scientists. R was created at Bell Laboratories in 1993 as an alternative to S. In recent years, R has become very popular with statisticians and data miners like the popular FiveThirtyEight.com, a news outlet with a focus on politics and sports, which does a lot of work in R. Unlike most languages, arrays in R are 1-indexed to mirror the convention used by mathematicians and scientists.
+
+lzw_decompress_state_machine :: LZWDecodeState a -> [a] -> Int -> (LZWDecodeState a, [a])
+lzw_decompress_state_machine state prev input =
+    let new_dict  = M.insert n (prev ++ take 1 entry) mp
+        new_state = LZWDecodeState (n+1) new_dict
+    in  (new_state, entry)
+    where LZWDecodeState n mp = state
+          entry = case M.lookup input mp of
+            Just str -> str
+            Nothing | input == n -> prev ++ take 1 prev
+                    | otherwise  -> error $ "lzw_decompress_state_machine: unknown code: " ++ show input
+                    
+   Haskell is a purely functional programming language that was first released in 1990. It was born out of a desire to create a standardized, non-strict, purely functional programming language to replace the dozens of similar languages that had arisen at the time. All functions in Haskell are pure, including IO operations, which produce a “description” of what to do while remaining entirely pure and deterministic.
+   
+   while (<D>) {
+    print STDERR if $debug;
+    if (/^\s*TITLE\s*:\s*([^\s]+)/) {
+        $title{$1}=1;
+    } elsif (/^\s*IGNORE\s*:\s*([^\s]+)/) {
+        $ignore{$1}=1;
+    } elsif (/^\s*DOCBEGIN\s*:\s*([^\s]+)/) {
+        $docBegin=$1;
+    } elsif (/^\s*DOCEND\s*:\s*([^\s]+)/) {
+        $docEnd=$1;
+    } elsif (/^\s*IDBEGIN\s*:\s*([^\s]+)/) {
+        $idBegin=$1;
+    } elsif (/^\s*IDEND\s*:\s*([^\s]+)/) {
+        $idEnd=$1;
+    }
+}
+
+You're Correct!
+The name Perl actually refers to a family of languages, including Perl 5 and Perl 6, that are in common use today (Perl 5 and Perl 6 are, however, two separate languages that are incompatible with one another). Perl was created in 1987 by Larry Wall who aimed to build a language specifically for text processing to replace the common practice at the time of piping together tools like AWK and sed. Perl is famous for its regular expression syntax, which heavily inspired the regular expression syntaxes of many other languages, like Java, Python, JavaScript, and Ruby.
+
+quick_sort([],[]).
+quick_sort([H|T],Sorted):-
+    pivoting(H,T,L1,L2),quick_sort(L1,Sorted1),quick_sort(L2,Sorted2),
+    append(Sorted1,[H|Sorted2]).
+
+pivoting(H,[],[],[]).
+pivoting(H,[X|T],[X|L],G):-X=<H,pivoting(H,T,L,G).
+pivoting(H,[X|T],L,[X|G]):-X>H,pivoting(H,T,L,G).
+
+You're Correct!
+Prolog is a declarative logic programming language that was first developed in 1972 at the University of Aix-Marseille in France. Prolog programs are declared as facts and rules, which are then queried to obtain results. The original intention of the language was for use in natural language processing, but today it sees use in a variety of fields including artificial intelligence and theorem proving.
+
+entity ANDGATE is
+  port (
+    I1 : in std_logic;
+    I2 : in std_logic;
+    O  : out std_logic);
+end entity ANDGATE;
+
+architecture RTL of ANDGATE is
+begin
+  O <= I1 and I2;
+end architecture RTL;
+
+You're Correct!
+VHDL is a hardware design language that can be used in applications such as integrated circuits and field programmable gate arrays. VHDL was developed at the request of the Department of Defense in 1981 in an effort to better document the function of electronic hardware. VHDL's syntax is heavily based on Ada, which was another Department of Defense project at the time.
+
+https://quiz.triplebyte.com/language-identification/mystery_language.png
+
+You're Correct!
+Piet is a language in which programs look like abstract paintings. Execution begins at the upper left hand corner and proceeds to the end of the current block of color in a particular direction. A subsequent transition of color specifies an instruction to execute based on how much the hue and lightness differed between the two colors. The above program calculates the value of Pi by dividing the area of the large red circle by its squared radius. The description of this program states that “Naturally, a more accurate value can be obtained by using a bigger program”.
+   
+   
+   
